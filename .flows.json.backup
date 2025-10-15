@@ -1,0 +1,718 @@
+[
+    {
+        "id": "265d604bad7869c8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1a1b1c1d1e1f1g1h",
+        "type": "tab",
+        "label": "Gráfico com Limite",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "86d16c30784945b5",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b1a9c4f6b5b3c8d7",
+        "type": "ui_group",
+        "name": "Dashboard",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "bc369cd5448aca77",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "9089683c0f698bda",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "0713e60d97c0d182",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "f8c3d9ad9b3fb4b3",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "9089683c0f698bda",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "0713e60d97c0d182",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "669f980f14989b2e",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "f8c3d9ad9b3fb4b3",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "ui_group1",
+        "type": "ui_group",
+        "name": "Dashboard",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "4d8813d8d56d12d2",
+        "type": "ui_group",
+        "name": "Gráfico",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7ac0717bc1624e71",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "10.0.0.150",
+        "port": "102",
+        "rack": "0",
+        "slot": "1",
+        "localtsaphi": "02",
+        "localtsaplo": "00",
+        "remotetsaphi": "03",
+        "remotetsaplo": "00",
+        "connmode": "tsap",
+        "adapter": "",
+        "busaddr": 2,
+        "cycletime": "500",
+        "timeout": "1500",
+        "name": "logo",
+        "vartable": [
+            {
+                "addr": "DB1,X2.1",
+                "name": "QT. COM DEFEITO"
+            },
+            {
+                "addr": "DB1,X2.0",
+                "name": "PRODUZIDOS"
+            },
+            {
+                "addr": "DB1,X2.2",
+                "name": "QT. PINTURA OK"
+            },
+            {
+                "addr": "DB1,X2.3",
+                "name": "SALVA GRAFICO"
+            }
+        ]
+    },
+    {
+        "id": "eb1b01bfbf51",
+        "type": "ui_group",
+        "name": "Gráficos",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "dashboard1",
+        "type": "ui_group",
+        "name": "Painel de Teste",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "08132dd7f111429d",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "411a7f54d3f87fc2",
+        "type": "ui_spacer",
+        "z": "1a1b1c1d1e1f1g1h",
+        "name": "spacer",
+        "group": "ui_group1",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2cc34f4a5d145b4a",
+        "type": "ui-theme",
+        "name": "PRODUÇÃO FINAL",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "d41fa628b55d49f7",
+        "type": "inject",
+        "z": "265d604bad7869c8",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 400,
+        "wires": [
+            [
+                "a9b31241c1248352"
+            ]
+        ]
+    },
+    {
+        "id": "2d6504805fcbc917",
+        "type": "http request",
+        "z": "265d604bad7869c8",
+        "d": true,
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://powerview.comerc.com.br/powerview/historico/charts/managementcost",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 430,
+        "y": 380,
+        "wires": [
+            [
+                "17783a0e6d28635c"
+            ]
+        ]
+    },
+    {
+        "id": "17783a0e6d28635c",
+        "type": "debug",
+        "z": "265d604bad7869c8",
+        "d": true,
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ecb57a5a60cda367",
+        "type": "html",
+        "z": "265d604bad7869c8",
+        "d": true,
+        "name": "",
+        "property": "payload",
+        "outproperty": "payload",
+        "tag": "",
+        "ret": "html",
+        "as": "single",
+        "chr": "_",
+        "x": 770,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "67161749fa0ba6bd",
+        "type": "http in",
+        "z": "265d604bad7869c8",
+        "d": true,
+        "name": "",
+        "url": "https://powerview.comerc.com.br/powerview/historico/charts/managementcost",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 370,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9b31241c1248352",
+        "type": "function",
+        "z": "265d604bad7869c8",
+        "d": true,
+        "name": "function 1",
+        "func": "\n    msg.cookies = {\n         \"bearned_session\": \"eyJpdiI6IjV1aGdIZnVpQ0JCY2RaNW0zZFpEcXc9PSIsInZhbHVlIjoia3pQS29pMHJabnl5dkJmcTJMYkJNdmlldkNOd1VybS9zYXowMG5nMFJkMlM3ZGFZWUlsemlmNUpkRWdTekpqSHlLWG12UG5UZVdDUzg5bEorMGZQakVhY0hRenArelZ0MlRFc2I5c3laK1RlSXhGUWdRMEJNUHIvcXZzWnljT3giLCJtYWMiOiJiNGNlMGFiMzBjYTBhNDkyZjcxNGM2NWU0YWYxY2IzN2QwY2NhYzQzMTgyM2QxYmE3YzAxZTI2NTdlYzJkNTQ5IiwidGFnIjoiIn0%3D\"\n    };\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [
+                "2d6504805fcbc917"
+            ]
+        ]
+    },
+    {
+        "id": "inject_dado",
+        "type": "inject",
+        "z": "1a1b1c1d1e1f1g1h",
+        "d": true,
+        "name": "Gerar valor aleatório",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "gera_valor"
+            ]
+        ]
+    },
+    {
+        "id": "gera_valor",
+        "type": "function",
+        "z": "1a1b1c1d1e1f1g1h",
+        "d": true,
+        "name": "Gera valor aleatório",
+        "func": "msg.payload = Math.floor(Math.random() * 100);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 240,
+        "wires": [
+            [
+                "limita_dados"
+            ]
+        ]
+    },
+    {
+        "id": "limita_dados",
+        "type": "function",
+        "z": "1a1b1c1d1e1f1g1h",
+        "d": true,
+        "name": "Limita e remove o primeiro",
+        "func": "// Número máximo de pontos no gráfico\nconst limite = 7;\n\n// Pega os dados salvos anteriormente\nlet dados = flow.get(\"dados\") || [];\n// Adiciona o novo valor recebido\ndados.push(msg.payload);\n\n// Se tiver mais que o limite, remove o primeiro (mais antigo)\nif (dados.length > limite) {\n    dados.shift();\n}\n\n// Salva de volta na memória do fluxo\nflow.set(\"dados\", dados);\n\n// Retorna formato para o gráfico\nmsg.payload = [{\n    series: [\"Valores\"],\n    data: [dados],\n    labels: dados.map((v, i) => \"Dado \" + (i + 1))\n}];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5fb89fffbd84c6b",
+        "type": "debug",
+        "z": "1a1b1c1d1e1f1g1h",
+        "d": true,
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "07222d096aa561d4",
+        "type": "inject",
+        "z": "86d16c30784945b5",
+        "name": "Backlog",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "BACKLOG",
+        "payload": "51",
+        "payloadType": "num",
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "e865c04371148fc0"
+            ]
+        ]
+    },
+    {
+        "id": "cdd5808b1356612a",
+        "type": "inject",
+        "z": "86d16c30784945b5",
+        "name": "Executadas",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "EXECUTADAS",
+        "payload": "43",
+        "payloadType": "num",
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "e865c04371148fc0"
+            ]
+        ]
+    },
+    {
+        "id": "34d5e815e78f7839",
+        "type": "inject",
+        "z": "86d16c30784945b5",
+        "name": "Abertas",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ALERTAS",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "e865c04371148fc0"
+            ]
+        ]
+    },
+    {
+        "id": "e4da71204c9a7a16",
+        "type": "debug",
+        "z": "86d16c30784945b5",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e865c04371148fc0",
+        "type": "ui-chart",
+        "z": "86d16c30784945b5",
+        "group": "669f980f14989b2e",
+        "name": "",
+        "label": "chart",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "MES",
+        "xAxisProperty": "14/abr",
+        "xAxisPropertyType": "str",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "70",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 770,
+        "y": 280,
+        "wires": [
+            [
+                "e4da71204c9a7a16"
+            ]
+        ]
+    }
+]
