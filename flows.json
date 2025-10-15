@@ -568,8 +568,8 @@
         "topic": "BACKLOG",
         "payload": "41",
         "payloadType": "num",
-        "x": 410,
-        "y": 360,
+        "x": 290,
+        "y": 320,
         "wires": [
             [
                 "e865c04371148fc0"
@@ -597,8 +597,8 @@
         "topic": "EXECUTADAS",
         "payload": "27",
         "payloadType": "num",
-        "x": 410,
-        "y": 300,
+        "x": 290,
+        "y": 260,
         "wires": [
             [
                 "e865c04371148fc0"
@@ -626,8 +626,8 @@
         "topic": "ALERTAS",
         "payload": "17",
         "payloadType": "num",
-        "x": 410,
-        "y": 240,
+        "x": 290,
+        "y": 200,
         "wires": [
             [
                 "e865c04371148fc0"
@@ -647,8 +647,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 280,
+        "x": 820,
+        "y": 240,
         "wires": []
     },
     {
@@ -707,8 +707,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 770,
-        "y": 280,
+        "x": 630,
+        "y": 240,
         "wires": [
             [
                 "e4da71204c9a7a16"
