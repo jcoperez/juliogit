@@ -6,6 +6,7 @@
     "dependencies": {
         "@5minds/node-red-dashboard-2-processcube-dynamic-table": "~2.0.3",
         "@flowfuse/node-red-dashboard": "~1.29.0",
+        "node-red-contrib-modbus": "~5.44.1",
         "node-red-contrib-s7": "~3.1.0",
         "node-red-dashboard": "~3.6.6",
         "node-red-dashboard-2-t86": "~0.1.1"

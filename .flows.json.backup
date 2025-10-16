@@ -23,6 +23,14 @@
         "env": []
     },
     {
+        "id": "79ad68b1a877dfda",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "b1a9c4f6b5b3c8d7",
         "type": "ui_group",
         "name": "Dashboard",
@@ -333,6 +341,36 @@
         }
     },
     {
+        "id": "18af46083ea847a4",
+        "type": "modbus-client",
+        "name": "IHM TANQUE",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "10.0.0.107",
+        "tcpPort": 502,
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": 9600,
+        "serialDatabits": 8,
+        "serialStopbits": 1,
+        "serialParity": "none",
+        "serialConnectionDelay": 100,
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
         "id": "d41fa628b55d49f7",
         "type": "inject",
         "z": "265d604bad7869c8",
@@ -551,6 +589,7 @@
         "id": "07222d096aa561d4",
         "type": "inject",
         "z": "86d16c30784945b5",
+        "d": true,
         "name": "Backlog",
         "props": [
             {
@@ -568,8 +607,8 @@
         "topic": "BACKLOG",
         "payload": "41",
         "payloadType": "num",
-        "x": 410,
-        "y": 360,
+        "x": 290,
+        "y": 320,
         "wires": [
             [
                 "e865c04371148fc0"
@@ -580,6 +619,7 @@
         "id": "cdd5808b1356612a",
         "type": "inject",
         "z": "86d16c30784945b5",
+        "d": true,
         "name": "Executadas",
         "props": [
             {
@@ -597,8 +637,8 @@
         "topic": "EXECUTADAS",
         "payload": "27",
         "payloadType": "num",
-        "x": 410,
-        "y": 300,
+        "x": 290,
+        "y": 260,
         "wires": [
             [
                 "e865c04371148fc0"
@@ -609,6 +649,7 @@
         "id": "34d5e815e78f7839",
         "type": "inject",
         "z": "86d16c30784945b5",
+        "d": true,
         "name": "Abertas",
         "props": [
             {
@@ -626,8 +667,8 @@
         "topic": "ALERTAS",
         "payload": "17",
         "payloadType": "num",
-        "x": 410,
-        "y": 240,
+        "x": 290,
+        "y": 200,
         "wires": [
             [
                 "e865c04371148fc0"
@@ -638,6 +679,7 @@
         "id": "e4da71204c9a7a16",
         "type": "debug",
         "z": "86d16c30784945b5",
+        "d": true,
         "name": "debug 3",
         "active": true,
         "tosidebar": true,
@@ -647,18 +689,19 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 280,
+        "x": 820,
+        "y": 240,
         "wires": []
     },
     {
         "id": "e865c04371148fc0",
         "type": "ui-chart",
         "z": "86d16c30784945b5",
+        "d": true,
         "group": "669f980f14989b2e",
         "name": "",
         "label": "chart",
-        "order": 1,
+        "order": 2,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
@@ -707,12 +750,137 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 770,
-        "y": 280,
+        "x": 630,
+        "y": 240,
         "wires": [
             [
                 "e4da71204c9a7a16"
             ]
+        ]
+    },
+    {
+        "id": "db9517d93e1aebee",
+        "type": "modbus-read",
+        "z": "79ad68b1a877dfda",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "270",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "m",
+        "delayOnStart": false,
+        "enableDeformedMessages": false,
+        "startDelayTime": "",
+        "server": "18af46083ea847a4",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 290,
+        "y": 860,
+        "wires": [
+            [
+                "9cb935d39795e120"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "97c011ce54ec1da8",
+        "type": "debug",
+        "z": "79ad68b1a877dfda",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "9cb935d39795e120",
+        "type": "function",
+        "z": "79ad68b1a877dfda",
+        "name": "function 3",
+        "func": "let valor = msg.payload[0];\nmsg.payload = valor / 10;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 860,
+        "wires": [
+            [
+                "97c011ce54ec1da8",
+                "246db7ae6b445ac8"
+            ]
+        ]
+    },
+    {
+        "id": "246db7ae6b445ac8",
+        "type": "ui-gauge",
+        "z": "79ad68b1a877dfda",
+        "name": "",
+        "group": "669f980f14989b2e",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 690,
+        "y": 960,
+        "wires": [
+            []
         ]
     }
 ]
