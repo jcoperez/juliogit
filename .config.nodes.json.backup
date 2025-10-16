@@ -1041,5 +1041,27 @@
                 "file": "\\Users\\SUPORTE\\.node-red\\node_modules\\@flowfuse\\node-red-dashboard\\nodes\\widgets\\ui_progress.js"
             }
         }
+    },
+    "node-red-contrib-s7": {
+        "name": "node-red-contrib-s7",
+        "version": "3.1.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "s7": {
+                "name": "s7",
+                "types": [
+                    "s7 endpoint",
+                    "s7 in",
+                    "s7 out",
+                    "s7 control"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-s7",
+                "file": "\\Users\\SUPORTE\\.node-red\\node_modules\\node-red-contrib-s7\\red\\s7.js"
+            }
+        }
     }
 }
